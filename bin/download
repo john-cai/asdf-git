@@ -8,7 +8,7 @@ download_git() {
 	echo "version is $version"
 	echo "download path is $download_path"
 
-	if [[ $version =~ ^v[0-9]+\.[0-9]+\.[0-9]+ ]] ; then
+	if [[ $version =~ [0-9]+\.[0-9]+\.[0-9]+ ]] ; then
 		download $version $download_path tags
 	else
 		download $version $download_path heads
@@ -21,6 +21,11 @@ download() {
 	local type=$3
 
 	base_url="https://github.com/git/git/archive/refs/${type}/"
+
+	if [[ $type == 'tags' ]]; then
+		branch="v$branch"
+	fi
+
 	download_url="${base_url}${branch}.zip"
 
 	echo "${download_url}"
