@@ -21,7 +21,7 @@ asdf-plugin-lint:
 asdf-plugin-test:
   stage: test
   before_script:
-    - apt update && apt install -y git curl bsdmainutils file
+    - apt update && apt install -y git curl bsdmainutils file unzip make autoconf gcc zlib1g-dev openssl expat libc6 gettext
     - git clone https://github.com/asdf-vm/asdf.git
     - . asdf/asdf.sh
   script:
