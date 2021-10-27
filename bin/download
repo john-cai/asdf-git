@@ -9,9 +9,9 @@ download_git() {
 	echo "download path is $download_path"
 
 	if [[ $version =~ [0-9]+\.[0-9]+\.[0-9]+ ]] ; then
-		download $version $download_path tags
+		download "$version" "$download_path" tags
 	else
-		download $version $download_path heads
+		download "$version" "$download_path" heads
 	fi
 }
 

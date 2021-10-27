@@ -16,13 +16,13 @@ sort_versions() {
 }
 
 list_releases() {
-  declare releases="$(curl -fsS --url $RELEASES_URL)"
-  echo "$(echo "$releases" | grep -oE "name\": *\".*\"," | sed 's/name\": *\"//;s/\",//')"
+  local releases="$(curl -fsS --url $RELEASES_URL)"
+  echo "$releases" | grep -oE "name\": *\".*\"," | sed 's/name\": *\"//;s/\",//'
 }
 
 list_branches() {
-  declare branches="$(curl -fsS --url $BRANCHES_URL)"
-  echo "$(echo "$branches" | grep -oE "name\": *\".*\"," | sed 's/name\": *\"//;s/\",//')"
+  local branches="$(curl -fsS --url $BRANCHES_URL)"
+  echo "$branches" | grep -oE "name\": *\".*\"," | sed 's/name\": *\"//;s/\",//'
 }
 
 filter_releases(){
