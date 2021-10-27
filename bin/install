@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+set -e
+
+unzip -qq "${ASDF_DOWNLOAD_PATH}/archive.zip" -d "${ASDF_DOWNLOAD_PATH}/"
+cd "${ASDF_DOWNLOAD_PATH}/git-${ASDF_INSTALL_VERSION}"
+make configure
+./configure --prefix="${ASDF_INSTALL_PATH}"
+make
+make install
