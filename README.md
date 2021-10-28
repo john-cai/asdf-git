@@ -4,13 +4,17 @@ git plugin for [asdf version manager](https://github.com/asdf-vm/asdf)
 
 ## Requirements
 
-- [gcc](https://www.gnu.org/software/gcc/index.html) - `brew install gcc`
-- [autotools](https://www.gnu.org/software/automake/manual/html_node/Autotools-Introduction.html) - `brew install autoconf`
-- [curl](https://curl.se/) - `brew install curl` (MacOS ships with curl)
-- [zlib](https://www.zlib.net/) - `brew install zlib`
-- [openssl](https://www.openssl.org/) - `brew install openssl`
-- [expat](https://libexpat.github.io/) - `brew install expat`
-- [libiconv](https://www.gnu.org/software/libiconv/) - `brew install libiconv`
+- [autoconf](https://www.gnu.org/software/autoconf/)
+- [bash](https://www.gnu.org/software/bash/)
+- [curl](https://curl.se/)
+- [expat](https://libexpat.github.io/)
+- [gcc](https://www.gnu.org/software/gcc/index.html)
+- [gettext](https://www.gnu.org/software/gettext/)
+- [make](https://www.gnu.org/software/make/)
+- [libiconv](https://www.gnu.org/software/libiconv/)
+- [openssl](https://www.openssl.org/)
+- unzip
+- [zlib](https://www.zlib.net/)
 
 ### Install
 

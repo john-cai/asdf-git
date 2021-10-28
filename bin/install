@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 set -e
 
+check_dependencies "$(dirname "$0")/../bin/help.deps" "failure"
+
 unzip -qq "${ASDF_DOWNLOAD_PATH}/archive.zip" -d "${ASDF_DOWNLOAD_PATH}/"
 cd "${ASDF_DOWNLOAD_PATH}/git-${ASDF_INSTALL_VERSION}"
 make configure
