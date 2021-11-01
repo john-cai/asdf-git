@@ -1,6 +1,11 @@
 #!/usr/bin/env bash
 set -e
 
+current_script_path="${BASH_SOURCE[0]}"
+plugin_dir="$(dirname "$(dirname "$current_script_path")")"
+
+source "${plugin_dir}/lib/utils.bash"
+
 check_dependencies "$(dirname "$0")/../bin/help.deps" "failure"
 
 unzip -qq "${ASDF_DOWNLOAD_PATH}/archive.zip" -d "${ASDF_DOWNLOAD_PATH}/"
