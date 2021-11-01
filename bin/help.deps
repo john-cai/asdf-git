@@ -1,3 +1,4 @@
+# shellcheck disable=SC2148 # SC2148 is irrelevant because this is not a shell file
 autoconf
 bash
 curl
@@ -6,3 +7,4 @@ gettext
 make
 openssl
 unzip
+zlib
