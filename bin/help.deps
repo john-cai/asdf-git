@@ -1,9 +1,18 @@
-# shellcheck disable=SC2148 # SC2148 is irrelevant because this is not a shell file
-autoconf
-bash
-curl
-gcc
-gettext
-make
-openssl
-unzip
+#!/usr/bin/env bash
+
+current_script_path="${BASH_SOURCE[0]}"
+plugin_dir="$(dirname "$(dirname "$current_script_path")")"
+
+function print_deps() {
+  local dependencies_file="${1}"
+  local failure_type="${2}" # should be "warning" or "failure"
+  declare -a missing_dependencies=()
+
+  # loop over file of line separated list of dependencies required by this tool
+  while IFS="" read -r p || [ -n "${p}" ]; do
+    echo "${p}"
+  done <"${dependencies_file}"
+}
+
+print_deps "${plugin_dir}/lib/command_dependencies.txt"
+
