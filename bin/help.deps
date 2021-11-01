@@ -5,8 +5,6 @@ plugin_dir="$(dirname "$(dirname "$current_script_path")")"
 
 function print_deps() {
   local dependencies_file="${1}"
-  local failure_type="${2}" # should be "warning" or "failure"
-  declare -a missing_dependencies=()
 
   # loop over file of line separated list of dependencies required by this tool
   while IFS="" read -r p || [ -n "${p}" ]; do
