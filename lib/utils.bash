@@ -41,11 +41,11 @@ function check_dependencies() {
 
 	if [ "${#missing_dependencies[@]}" -ne 0 ]; then
 		if [ "${failure_type}" == "warning" ]; then
-			log_warning "Missing dependencies! These are hard requirements to install $(get_plugin_name)."
+			log_warning "Missing dependencies! These are hard requirements to install git."
 			log_warning "${missing_dependencies[@]}"
 			log_info "You should install the listed dependencies before continuing."
 		else
-			log_failure "Missing dependencies! These are hard requirements to install $(get_plugin_name)."
+			log_failure "Missing dependencies! These are hard requirements to install git."
 			log_failure_and_exit "${missing_dependencies[@]}"
 		fi
 	else

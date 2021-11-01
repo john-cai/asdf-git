@@ -7,4 +7,3 @@ gettext
 make
 openssl
 unzip
-zlib
