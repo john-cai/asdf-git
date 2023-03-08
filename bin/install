@@ -14,3 +14,6 @@ make configure
 ./configure --prefix="${ASDF_INSTALL_PATH}"
 make
 make install
+cd contrib/subtree
+make
+make install
